@@ -6,7 +6,7 @@ const port = 2000;
 app.use(bodyParse.json())
 app.use(cors());
 
-//Creating a endpoint of get
+
 app.get('/', (req,res)=>{
     let query = req.query
     let path = req.path
@@ -15,7 +15,7 @@ app.get('/', (req,res)=>{
     res.json({"info":{query,path}})
 })
 
-//Creating a endpoint of post
+
 app.post('/postData',(req,res)=>{
     let data = [];
     data.push(req.body.id)
